@@ -505,8 +505,8 @@ class GRPOLearner(agentic_rl_learner.AgenticRLLearner[TGrpoConfig]):
 
     # Extract time metrics (env_time and reward_time)
     for time_key, prefix in [
-        ("env_time", "generation/trajectory/env_time"),
-        ("reward_time", "generation/trajectory/reward_time"),
+        ("env_time", "trajectory/env_time"),
+        ("reward_time", "trajectory/reward_time"),
     ]:
       time_dicts = [item.traj.get(time_key, {}) for item in trajectories]
 
